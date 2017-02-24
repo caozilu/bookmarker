@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+// import Ember from 'ember';
 
 export default DS.Model.extend({
   username: DS.attr('string'),
@@ -12,5 +13,9 @@ export default DS.Model.extend({
     defaultValue(){
       return new Date();
     }
+  }),
+  bookmarks: DS.hasMany('bookmark'),
+  fullName: Ember.computed('firstName', 'lastName', function() {
+    return `${this.get('firstName')} ${this.get('lastName')}`;
   })
 });

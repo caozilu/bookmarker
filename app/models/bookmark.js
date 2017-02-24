@@ -9,5 +9,6 @@ export default DS.Model.extend({
     defaultValue(){
       return new Date();
     }
-  })
+  }),
+  user:DS.belongsTo('user')
 });
