@@ -6,6 +6,7 @@ export default DS.Model.extend({
   email: DS.attr('string'),
   firstName: DS.attr('string'),
   lastName: DS.attr('string'),
+  avatar: DS.attr('string'),
   isAdmin: DS.attr('boolean', {
     defaultValue: false
   }),
