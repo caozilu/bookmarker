@@ -15,7 +15,7 @@ export default Ember.Component.extend({
                 () => {
                     Ember.Logger.info('failure to save');
                 }
-            )
+            );
         },
         cancel(){
             Ember.Logger.info('cancel called');
